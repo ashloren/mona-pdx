@@ -1,6 +1,6 @@
 <?php
 /* Set e-mail recipient */
-$myemail = "thegirlnextfloor@gmail.com";
+$myemail = "the.girl.next.floor@gmail.com";
 
 /* Check all form inputs using check_input function */
 $name = check_input($_POST['name'], "Enter your name");
@@ -29,7 +29,7 @@ $message
 mail($myemail, $subject, $message);
 
 /* Redirect visitor to the thank you page */
-header('Location: http://www.nwwildlifemetalart.com/thanks.html');
+header('Location: https://htmlpreview.github.io/?https://github.com/ashloren/mona-pdx/blob/main/thanks.html');
 exit();
 
 /* Functions we used */
