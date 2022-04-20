@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/aseram/1/edit
+-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!-- Enable responsive view on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Responsive Tiled Photo Gallery in Pure CSS</title>
+  
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      background: #EEE;
+      font: 10px/13px 'Lucida Sans',sans-serif;
+    }
+    .wrap {
+      overflow: hidden;
+      margin: 10px;
+    }
+    .box {
+      float: left;
+      position: relative;
+      width: 20%;
+      padding-bottom: 20%;
+    }
+    .boxInner {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+      overflow: hidden;
+    }
+    .boxInner img {
+      width: 100%;
+    }
+    .boxInner .titleBox {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-bottom: -50px;
+      background: #000;
+      background: rgba(0, 0, 0, 0.5);
+      color: #FFF;
+      padding: 10px;
+      text-align: center;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+    body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
+      margin-bottom: 0;
+    }
+    @media only screen and (max-width : 480px max-height:500px;) {
+      /* Smartphone view: 1 tile */
+      .box {
+        width: 100%;
+        padding-bottom: 100%;
+      }
+    }
+    @media only screen and (max-width : 650px) and (min-width : 481px) {
+      /* Tablet view: 2 tiles */
+      .box {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+    }
+    @media only screen and (max-width : 1050px) and (min-width : 651px) {
+      /* Small desktop / ipad view: 3 tiles */
+      .box {
+        width: 33.3%;
+        padding-bottom: 33.3%;
+      }
+    }
+    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+      /* Medium desktop: 4 tiles */
+      .box {
+        width: 25%;
+        padding-bottom: 25%;
+      }
+    }
+	a {color:white;}
+  </style>
+  <script type="text/javascript" src="https://dl.dropboxusercontent.com/u/12622552/Book-Gallery/glasslayerpopup.js"></script>
+<script type="text/javascript">
+
+function showPopup() {
+
+	new GlassLayerPopup().showUrl('https://dl.dropboxusercontent.com/u/12622552/Book-Gallery/dorian-gray.html');
+	}
+
+	</script>
+	</head>
+	<body bgcolor="gray">
+	<a href="javascript:showPopup()">show popup</a>
+	</body>
+
+  <!-- Enable media queries for old IE -->
+  <!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+
+<style id="jsbin-css">
+
+</style>
+</head>
+
+<body class="no-touch">
+
+  <div class="wrap">
+    <div class="box">
+      <div class="boxInner">
+        <img src="http://3.bp.blogspot.com/-pnlaoV0a_ys/TcbxU_gH0CI/AAAAAAAAAkA/gvMluGC_ZsY/s1600/dorian%2Bgray.jpg" />
+        <div class="titleBox"><a href="javascript:showPopup()">The Picture of Dorian Gray</a></div>
+      </div>
+	  </div>
+	  <div class="box">
+      <div class="boxInner">
+        <img src="http://rottenink.files.wordpress.com/2013/02/sherlock-holmes.jpeg" />
+        <div class="titleBox"><a href="https://dl.dropboxusercontent.com/u/12622552/Book-Gallery/sherlock-holmes.html">The Return of Sherlock Holmes</a></div>
+      </div>
+	  </div>
+    <!-- Define all of the tiles: -->
+    <div class="box">
+      <div class="boxInner">
+        <img src="http://1.bp.blogspot.com/-fFmWFq4bKJU/TzhMJBJXqdI/AAAAAAAAAqo/PPKeybFGUIM/s1600/4023.jpg" />
+        <div class="titleBox"><a href="https://dl.dropboxusercontent.com/u/12622552/Book-Gallery/scarlet-letter.html">The Scarlet Letter</a></div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="http://25.media.tumblr.com/265230b3c9e2247836c6b701aa7ecaa7/tumblr_ml1n2bmema1qlegq7o1_500.jpg" />
+        <div class="titleBox"><a href="https://dl.dropboxusercontent.com/u/12622552/Book-Gallery/great-gatsby.html">The Great Gatsby</a></div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="https://i.pinimg.com/originals/c8/7b/0f/c87b0f154ab3b6bf4ef875b97ba392e7.jpg" />
+        <div class="titleBox"><a href="https://dl.dropboxusercontent.com/u/12622552/Book-Gallery/romeo-juliet.html">Romeo & Juliet</a></div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="http://d28hgpri8am2if.cloudfront.net/book_images/cvr9781416501817_9781416501817_hr.jpg" />
+        <div class="titleBox">Crime & Punishment</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="http://hauntedhearts.files.wordpress.com/2011/07/emily-bronte-wuthering-heights.jpg" />
+        <div class="titleBox">Wuthering Heights</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="http://www.penguin.com.au/jpg-large/9780141023533.jpg" />
+        <div class="titleBox">Great Expectations</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81v75HsSTrL.jpg" />
+        <div class="titleBox">Treasure Island</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="http://2.bp.blogspot.com/-ahpaJ4m_SeI/TpoawNyprVI/AAAAAAAADb0/DK08pbqyKZE/s1600/Washington%2BIrving%2Bbook.a.jpg" />
+        <div class="titleBox">The Legend of Sleepy Hollow</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="http://d28hgpri8am2if.cloudfront.net/book_images/cvr9781416500223_9781416500223_hr.jpg" />
+        <div class="titleBox">The Adventures of Tom Sawyer</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="http://nishitak.com/wp-content/uploads/2010/11/001_gullivers_travels.jpg" />
+        <div class="titleBox">Gulliver's Travels</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71fjbLiAgRL.jpg" />
+        <div class="titleBox">The Prince and the Pauper</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="https://www.dramaticpublishing.com/media/catalog/product/cache/1/image/300x436/9df78eab33525d08d6e5fb8d27136e95/a/n/anne_of_green_gables_outside_cover_updated.jpg" />
+        <div class="titleBox">Anne of Green Gables</div>
+      </div>
+	  </div>
+     <div class="box">
+      <div class="boxInner">
+        <img src="http://media.npr.org/assets/bakertaylor/covers/t/the-war-of-the-worlds/9780812505153_custom-s6-c30.jpg?t=1312821973" />
+        <div class="titleBox">The War of the Worlds</div>
+      </div>
+	  
+
+  </div>
+  <!-- /#wrap -->
+  
+  <!-- Add some JavaScript to enable toggling the descriptions when an image is tapped on a touchscreen device -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      // See if this is a touch device
+      if ('ontouchstart' in window)
+      {
+        // Set the correct body class
+        $('body').removeClass('no-touch').addClass('touch');
+        
+        // Add the touch toggle to show text
+        $('div.boxInner img').click(function(){
+          $(this).closest('.boxInner').toggleClass('touchFocus');
+        });
+      }
+    });
+  </script>
+  
+<script>
+
+</script>
+<script src="https://dl.dropboxusercontent.com/u/12622552/Book-Gallery/edit.js"></script>
+<script>jsbinShowEdit({"root":"http://static.jsbin.com","csrf":"e6o1hLq15XoXiBrGBRsK5HwD"});</script>
+<script src="https://dl.dropboxusercontent.com/u/12622552/Book-Gallery/eventsource.js?3.8.10"></script>
+<script src="https://dl.dropboxusercontent.com/u/12622552/Book-Gallery/spike.js?3.8.10"></script>
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-1656750-34']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+})();
+</script>
+</body>
+</html>
