@@ -1,0 +1,204 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery UI Dialog Demo - Ashish's Blog</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/jquery-ui.min.js"></script>
+    <link type="text/css" rel="Stylesheet" href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/themes/smoothness/jquery-ui.css">
+	<style type="text/css">
+	.three-col {
+       -moz-column-count: 3;
+       -moz-column-gap: 20px;
+       -webkit-column-count: 3;
+       -webkit-column-gap: 20px;
+}
+
+a {font-family:georgia;font-size:14pt;}
+p {font-family:georgia;font-size:14pt;}
+h2 {font-family:georgia;font-size:18pt;}
+
+
+.warning, .error, .info, .success {
+    padding: 20px 20px 20px 40px;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-width: 1px;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+}
+ 
+.info {
+    background-color: #dfeff5;
+ 
+    border-color: #9ebcce;
+}
+p.req {font-family:georgia;font-size:11pt;}
+	
+	</style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a#pop').live('click', function (e) {
+                e.preventDefault();
+                var page = $(this).attr("href")
+                var pagetitle = $(this).attr("title")
+                var $dialog = $('<div></div>')
+                .html('<iframe style="border: 0px; " src="' + page + '" width="100%" height="100%"></iframe>')
+                .dialog({
+                    autoOpen: false,
+                    modal: true,
+                    height: 625,
+                    width: 800,
+                    title: pagetitle
+                });
+                $dialog.dialog('open');
+            });
+        });
+    </script>
+    </head>
+    <body>
+
+ 
+<div class="info">
+	<h2>Instructions:</h2>
+    <p>	<p>1. Click any of the links to open a popup window which will load the submission form for that site. 
+	<br>
+	2. Fill in your book information to tell the site about your upcoming free days on Amazon.
+	<br>
+	3. Close the popup and move onto the next site. Repeat with all the sites you want to notify.</p></p>
+</div>
+ 
+
+
+
+ <a id="pop" href="https://99cent-books.com/submit-your-book/" title="99 Cent Books">99 Cent Books</a><br>
+  <p class="req">Specializes in bargain books priced at 99 cents or less<br>
+   10 or more Amazon reviews<br>Average star rating of 4+</p>
+	 <a id="pop" href="http://www.sevenbillionereaderbooks.com/free-kindle-book-submission/" title="7 Billion eReader Books">Seven Billion eReader Books</a><br>
+<p class="req">Submit promotions scheduled in the next 30 days</p>	
+	<a id="pop" href="http://publishbig.com/submit-your-book/" title="Publish Big">Publish Big</a><br>
+	<p class="req">Submit promotions scheduled in the next 30 days</p>	
+	 <a id="pop" href="http://www.bondfirebooks.com/submission/" title="Bondfire Books">Bondfire Books</a><br>
+	 <a id="pop" href="http://freedigitalreads.com/author-submissions/" title="Free Digital Reads">Free Digital Reads</a><br>
+	 <p class="req">Prefers 4-5 star reviews<br>5-7 business days notice<br>Doesn't promote on weekends, your promotion must have at least one day during the week<br>If your book is selected, will send you a confirmation email within 1-2 business days</p>
+	 <a id="pop" href="http://ebookdealofday.com/free-book-feature/" title="eBook Deal of the Day">eBook Deal of the Day</a><br>
+	 <p class="req">Only accepts books in the romance genre<br>
+     <a id="pop" href="http://lovelybookpromotions.com/?page_id=124" title="Lovely Book Promotions">Lovely Book Promotions</a><br>
+	 <p class="req">5 days notice<br>Requires newsletter subscription</p>
+	 <a id="pop" href="http://slashedreads.com/free-book-page-basic-submission/" title="Slashed Reads">Slashed Reads</a><br>
+	 <p class="req">See availability calendar to reserve date first<br></p>
+	  <a id="pop" href="http://bookcanyon.com/submitbook/" title="Book Canyon">Book Canyon</a><br>
+ <a id="pop" href="http://kornerkonnection.com/" title="Korner Konnection">Korner Konnection</a><br>
+ <p class="req">See their Facebook page for guidelines before submitting<br>Requires a "Like" and Share on Facebook prior to submitting<br>Sends a confirmation email<br></p>
+	 <a id="pop" href="http://ereadergirl.com/submit-your-ebook-2/" title="eReader Girl">eReader Girl</a><br>
+	 <p class="req">No objectionable content</br>No non-fiction, children's books or Christian fiction<br>24 hour minimum notice<br></p>
+	 <a id="pop" href="http://bargainbooksy.com/for-authors" title="Bargain Booksy">Bargain Booksy</a><br></p>
+	  <p class="three-col"> <a id="pop" href="http://www.enkspoty.com/author-application-for-freebies/" title="enkspoty">enkspoty</a><br>
+	  <p class="req">No objectionable content<br>Middle-grade and Young Teen books</p>
+     <a id="pop" href="http://www.kfreebooks.com/submit/" title="kFree Books">kFree Books</a><br>
+	 <p class="req">Minimum 2 days advance notice<br>No objectionable content</p>
+	 <a id="pop" href="http://www.promokindle.com/submit-your-book/" title="Promo Kindle">Promo Kindle</a><br>
+	  <a id="pop" href="http://ifandorbutpublishing.com/ebook-for-free/" title="If, and or But Publishing">If, And or But Publishing</a><br>
+	  <p class="req">7 days advance notice<br>Sends email confirmation within 24 hours if they choose your book<br>Required to send cover JPG after receiving confirmation</p>
+	 <a id="pop" href="http://www.feedyourreader.com/submit-your-book-2/" title="Feed Your Reader">Feed Your Reader</a><br>
+	 <p class="req">No objectionable content<br>Prefers clean romance, young adult, children's books and Christian authors<br>Books must be priced at $3.99 or less</p>
+	 <a id="pop" href="http://www.indieheart.com/free-ebook-submission-form/" title="Indie Heart">Indie Heart</a><br>
+	 <p class="req">No objectionable content<br>Minimum 24 hours notice<br>May request a copy of book via email</p>
+	 <a id="pop" href="http://www.thefussylibrarian.com/submit/" title="The Fussy Librarian">The Fussy Librarian</a><br>
+	 <a id="pop" href="http://www.indieauthorland.com/submityourfreebook" title="Indie Author Land">Indie Author Land</a><br>
+     <a id="pop" href="http://readfreebook.net/submit_ebook.html" title="Read Free Book">Read Free Book</a><br>
+	 <a id="pop" href="http://www.ereadernation.com/author-submissions/" title="eReader Nation">eReader Nation</a><br>
+	 <p class="req">Only accepts Mystery, Action, Thriller, Suspense, Sc-Fi, Paranormal, or Western<br>5+ reviews<br>Average star rating 4+<br>
+	  <a id="pop" href="http://jungledealsandsteals.com/submit-your-kindle-freebie/" title="Jungle Deals and Steals">Jungle Deals and Steals</a><br>
+	  <p class="req">No objectionable content<br>24 hours advance notice<br></p>
+	 <a id="pop" href="http://igniteyourbook.com/free-ebook-submission/" title="Ignite Your Book">Ignite Your Book</a><br></p>
+	   <p class="three-col"><a id="pop" href="http://www.independentauthornetwork.com/free-ebooks.html" title="Independent Author Network">Independent Author Network</a><br></p>
+	 <a id="pop" href="http://support.hotzippy.net/?p=459" title="Hot Zippy">Hot Zippy</a><br>
+	 <a id="pop" href="http://ebookspice.com/submissions/submission-form-kdp-free" title="eBook Spice">eBook Spice</a><br>
+	 <p class="req">Erotica friendly!<br>Only features romance and erotica books</p>
+     <a id="pop" href="http://wantonreads.com/tell-us-about-your-book/" title="Wanton Reads">Wanton Reads</a><br>
+	 <p class="req">Erotica friendly!<br>Only features romance books</p>
+	 <a id="pop" href="http://pretty-hot.com/submit-your-book/" title="Pretty Hot">Pretty Hot</a><br>
+	  <a id="pop" href="http://contentmo.com/submit-your-free-ebook-promo" title="Content Mo">Content Mo</a><br>
+	  <p class="req">Requires email confirmation for newsletter subscription</p>
+	 <a id="pop" href="http://bookangel.co.uk/submit-your-book/" title="Book Angel">Book Angel</a><br>
+
+	 <a id="pop" href="http://www.freebooks.com/submit/" title="Free eBooks">Free eBooks</a><br>
+	 <a id="pop" href="http://www.ebooklister.net/submit.php" title="eBook Lister">eBook Lister</a><br>
+	 	 <p class="req">Requires email confirmation<br>Minimum star rating 3.5<br>No objectionable content<br>24 hours notice</p>
+	 <a id="pop" href="http://www.pixelofink.com/sfkb/" title="Pixel of Ink">Pixel of Ink</a><br>
+     <a id="pop" href="http://onehundredfreebooks.com/author-free-kindle-book-submission.html" title="One Hundred Free Books">One Hundred Free Books</a><br>
+	 <a id="pop" href="http://www.ereaderperks.com/authors/" title="eReader Perks">eReader Perks</a><br></p>
+	  <p class="three-col">  <a id="pop" href="http://www.daily-free-ebooks.com/suggest-free-ebook/" title="Daily Free eBooks">Daily Free eBooks</a><br>
+	  <p class="req">No free books, must be priced between 0.01 and 1.00</p>
+	 <a id="pop" href="http://greatbooksgreatdeals.wufoo.com/forms/z7x3p3/" title="Great Books Great Deals">Great Books Great Deals</a><br>
+	 <p class="req">Minimum of 20 reviews and average star rating of 4+<br>No non-fiction, children's books, graphic horror or erotica.</p>
+	 <a id="pop" href="http://bookfreebies.com/submit-book.php" title="Book Freebies">Book Freebies</a><br>
+	 <p class="req">At least 24 hours notice</p>
+	 <a id="pop" href="http://www.thatbookplace.com/free-promo-submissions/" title="That Book Place">That Book Place</a><br>
+	 <a id="pop" href="http://www.iloveebooks.com/for-authors.html" title="iLove eBooks">iLove eBooks</a><br>
+     <a id="pop" href="https://docs.google.com/spreadsheet/embeddedform?formkey=dC1PcUFvVlZiV25lcjYtZzhtNzNQQnc6MQ" title="The Digital Ink Spot">The Digital Ink Spot</a><br>
+	 <a id="pop" href="http://www.ebooksfreedaily.com/?page_id=16" title="eBooks Free Daily">eBooks Free Daily</a><br>
+	 <p class="req">At least 2 days notice<br>Minimum of 5 reviews and average star rating of at least 4</p>
+	  <a id="pop" href="http://www.frugal-freebies.com/p/submit-freebie.html" title="Frugal Freebies">Frugal Freebies</a><br>
+	 <a id="pop" href="http://itswritenow.com/submit-your-book/" title="It's Write Now">It's Write Now</a><br>
+	 <p class="req">No erotica</p>
+	 <a id="pop" href="http://somuchtowritesolittletime.com/submit-your-books-free-days/" title="So Much to Write So Little Time">So Much to Write So Little Time</a><br>
+	 <p class="req">No objectionable content</p>
+	 <a id="pop" href="http://ereadernewstoday.com/ent-free-book-submissions/" title="eReader News Today">eReader News Today</a><br>
+	 <p class="req">At least 3 days advance notice<br>No erotica</p>
+	 <a id="pop" href="http://freebooksy.com/editorial-submissions" title="Free Boosky">Free Booksy</a><br></p>
+      <p class="three-col"> <a id="pop" href="http://www.freebookdude.com/p/list-your-free-book.html" title="Free Book Dude">Free Book Dude</a><br>
+	  <p class="req">No erotica</p>
+	 <a id="pop" href="http://digitalinktoday.com/submit/" title="Digital Ink Today">Digital Ink Today</a><br>
+	 	 <a id="pop" href="http://bookdealhunter.com/submit-free-book/" title="Book Deal Hunter">Book Deal Hunter</a><br>
+		 <p class="req">At least 2 days notice<br>Requires newsletter subscription</p>
+	 <a id="pop" href="http://form.jotformpro.com/form/21078469493969?KeepThis=true&TB_iframe=true&height=550&width=1200" title="The Kindle Daily Review">The Kindle Daily Review</a><br>
+	 <p class="req">At least 14 days notice</p>
+	 <a id="pop" href="http://awesomegang.com/submit-your-book/" title="Awesome Gang">Awesome Gang</a><br>
+	 <a id="pop" href="http://www.justkindlebooks.com/submit-your-book/" title="Just Kindle Books">Just Kindle Books</a><br>
+     <a id="pop" href="http://free-kindle-books.deha-solutions.com/promote-your-book/" title="Free Kindle Books">Free Kindle Books</a><br>
+	 <a id="pop" href="http://www.freebooks.com/submit/" title="Free Books">Free Books</a><br>
+	  <a id="pop" href="http://www.freebookclub.org/kindle-books/book-submissions/" title="Free Book Club">Free Book Club</a><br>
+	  <p class="req">No erotica</p>
+	 <a id="pop" href="http://freeebooksme.com/kindle-free-days-e-book-submission" title="Free eBooks Me">Free eBooks Me</a><br>
+	 <a id="pop" href="http://www.sweetiespicks.com/submit-bargain-books/" title=""></a><br></p>
+	 <a id="pop" href="http://www.sevenbillionereaderbooks.com/free-kindle-book-submission/" title=""></a><br>
+     <a id="pop" href="http://www.fkbooksandtips.com/for-authors/free-kindle-promotion/" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+     <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	  <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+     <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 	  <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br></p>
+	 <a id="pop" href="" title=""></a><br>
+     <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+     <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	  <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+     <a id="pop" href="" title=""></a><br>
+	 <a id="pop" href="" title=""></a><br>
+    </body>
+    </html> 
