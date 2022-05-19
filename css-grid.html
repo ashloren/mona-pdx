@@ -1,0 +1,537 @@
+<style type="text/css">
+
+:root {
+  --cred: #8A161E;
+  --cblack: #141212;
+  --cwhite: #E5E4DE;
+}
+
+.slabtexted .slabtext{
+  display: -moz-inline-box;
+  display: inline-block;
+  white-space: nowrap;
+}
+.slabtextinactive .slabtext{
+  display: inline;
+  white-space: normal;
+  font-size: 1em !important;
+  letter-spacing: inherit !important;
+  word-spacing: inherit !important;
+  *letter-spacing: normal !important;
+  *word-spacing: normal !important;
+}
+.slabtextdone .slabtext{
+  display: block;
+}
+
+body{
+  background: var(--cblack);
+}
+
+header{
+  display: block;
+  position: relative;
+  width: 342px;
+  margin: 50px auto 0 auto;
+  background: var(--cwhite);
+  border: 8px solid var(--cblack);
+  border-bottom: 4px solid var(--cblack);
+  font-family: 'Krona One', sans-serif;
+}
+
+header::after{
+  content: "";
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
+}
+header, header::after{
+  background-image: url("https://assets.codepen.io/881020/bracket.png");
+  background-position: left; 
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+
+header h1{
+  margin: 0 25px;
+}
+
+ul{
+  margin: 0 auto 50px auto;
+  display: grid;
+  width: 350px;
+  grid-template-columns: repeat(auto-fit, 50px);
+  grid-auto-rows: 50px;
+  grid-auto-flow: dense;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath fill='%23e5e4de' d='M0 0h50v50H0z'/%3E%3Cpath d='M25.04 8l3.787 11.654h12.254l-9.914 7.203 3.787 11.654-9.914-7.203-9.913 7.203 3.787-11.654L9 19.654h12.254L25.04 8z' fill='%23141212'/%3E%3Cpath d='M50 0v50H0V0h50zm-4 4H4v42h42V4z' fill='%23141212'/%3E%3C/svg%3E");
+  background-size: 50px;
+}
+
+li{
+  grid-column-end: span 4;
+  grid-row-end: span 3;
+  background: var(--cwhite);
+  padding: 5px 10px;
+  border: 4px solid var(--cblack);
+}
+
+h1 {
+  text-transform: uppercase; 
+  line-height:1;
+}
+a{
+  text-decoration: none;
+  color: var(--cblack);
+}
+
+li:hover{
+  background-color: var(--cblack);
+}
+li:hover a{
+  color: var(--cwhite);
+}
+
+.card-o,.card-l,.card-x {
+  background-color: var(--cblack);
+}
+.card-o a,.card-l a,.card-x a{
+  color: var(--cwhite);
+}
+
+.card-o:hover,.card-l:hover,.card-x:hover {
+  background-color: var(--cwhite);
+}
+.card-o:hover a,.card-l:hover a,.card-x:hover a{
+  color: var(--cblack);
+}
+
+.card-g,.card-e,.card-r {
+  background-color: var(--cwhite);
+}
+.card-g a,.card-e a,.card-r a{
+  color: var(--cred);
+}
+
+.card-g:hover,.card-e:hover,.card-r:hover {
+  background-color: var(--cred);
+}
+.card-g:hover a,.card-e:hover a,.card-r:hover a{
+  color: var(--cwhite);
+}
+
+.card-s,.card-m,.card-z {
+  background-color: var(--cred);
+}
+.card-s a,.card-m a,.card-z a{
+  color: var(--cwhite);
+}
+
+.card-s:hover,.card-m:hover,.card-z:hover {
+  background-color: var(--cwhite);
+}
+.card-s:hover a,.card-m:hover a,.card-z:hover a{
+  color: var(--cred);
+}
+
+.card-a{
+  grid-column-end: span 6;
+  grid-row-end: span 3;
+  font-family: 'Krona One', sans-serif;
+}
+.card-a span:nth-child(n+2){
+  padding-top: 5px;
+  border-top: 4px var(--cblack) solid;
+}
+.card-a span:nth-child(-n+2){
+  padding-bottom: 5px;
+}
+.card-b{
+  grid-column-end: span 4;
+  grid-row-end: span 3;
+  font-family: 'Monoton', cursive;
+}
+.card-b span:nth-child(n+2){
+  padding-top: 12px;
+}
+.card-c{
+  grid-column-end: span 7;
+  grid-row-end: span 4;
+  font-family: 'Bungee Inline', cursive;
+}
+.card-c span:nth-child(n+2){
+  padding-top: 6px;
+}
+.card-d{
+  grid-column-end: span 6;
+  grid-row-end: span 4;
+  font-family: 'Righteous', cursive;
+}
+.card-d span:nth-child(3){
+  margin-top: -16px;
+}
+.card-e{
+  grid-column-end: span 4;
+  grid-row-end: span 3;
+  font-family: 'Fredoka One', cursive;
+}
+.card-e span:nth-child(n+2){
+  padding-top: 12px;
+}
+.card-f{
+  grid-column-end: span 5;
+  grid-row-end: span 2;
+  font-family: 'Fredoka One', cursive;
+}
+.card-g{
+  grid-column-end: span 3;
+  grid-row-end: span 3;
+  transform: rotate(-90deg);
+  font-family: 'Odibee Sans', cursive;
+}
+.card-g span:nth-child(2){
+  margin-top: -6px;
+}
+.card-g span:nth-child(3){
+  margin-top: -10px;
+}
+.card-h{
+  grid-column-end: span 4;
+  grid-row-end: span 2;
+  font-family: 'Krona One', sans-serif;
+}
+.card-h span:nth-child(n+2){
+  padding-top: 5px;
+}
+.card-i{
+  grid-column-end: span 5;
+  grid-row-end: span 2;
+  font-family: 'Fredericka the Great', cursive;
+}
+.card-j{
+  grid-column-end: span 6;
+  grid-row-end: span 6;
+  font-family: 'Odibee Sans', cursive;
+}
+.card-j span:nth-child(3){
+  margin-top: -10px;
+}
+.card-k{
+  grid-column-end: span 4;
+  grid-row-end: span 4;
+  transform: rotate(-90deg);
+  font-family: 'Krona One', sans-serif;
+}
+.card-l{
+  grid-column-end: span 6;
+  grid-row-end: span 3;
+  font-family: 'Monoton', cursive;
+}
+.card-l span{
+  margin-top: 9px;
+}
+.card-m{
+  grid-column-end: span 4;
+  grid-row-end: span 2;
+  font-family: 'Bungee Inline', cursive;
+}
+.card-n{
+  grid-column-end: span 4;
+  grid-row-end: span 3;
+  font-family: 'Righteous', cursive;
+}
+.card-n span:nth-child(3){
+  margin-top: -11px;
+}
+.card-o{
+  grid-column-end: span 3;
+  grid-row-end: span 3;
+  font-family: 'Fredoka One', cursive;
+  transform: rotate(-90deg);
+}
+.card-o span{
+  margin-top: 3px;
+}
+.card-p{
+  grid-column-end: span 4;
+  grid-row-end: span 2;
+  font-family: 'Krona One', sans-serif;
+}
+.card-p span:nth-child(n+2){
+  padding-top: 3px;
+  border-top: 2px var(--cblack) solid;
+}
+.card-p span:nth-child(-n+2){
+  padding-bottom: 3px;
+}
+.card-q{
+  grid-column-end: span 4;
+  grid-row-end: span 3;
+  font-family: 'Fredericka the Great', cursive;
+}
+.card-q span:nth-child(2){
+  margin-top: 3px;
+}
+.card-q span:nth-child(3){
+  margin-top: 13px;
+}
+.card-r{
+  grid-column-end: span 4;
+  grid-row-end: span 2;
+  font-family: 'Odibee Sans', cursive;
+}
+.card-r span:nth-child(2){
+  margin-top: 13px;
+}
+.card-s{
+  grid-column-end: span 5;
+  grid-row-end: span 5;
+  transform: rotate(-90deg);
+  font-family: 'Odibee Sans', cursive;
+}
+.card-s span:nth-child(2){
+  margin-top: -12px;
+}
+.card-s span:nth-child(3){
+  margin-top: -18px;
+}
+.card-t{
+  grid-column-end: span 4;
+  grid-row-end: span 3;
+  font-family: 'Monoton', cursive;
+}
+.card-t span:nth-child(n+2){
+  margin-top: 6px;
+}
+.card-u{
+  grid-column-end: span 4;
+  grid-row-end: span 4;
+  transform: rotate(-90deg);
+  font-family: 'Bungee Inline', cursive;
+}
+.card-u span:nth-child(n+2){
+  margin-top: 6px;
+}
+.card-v{
+  grid-column-end: span 3;
+  grid-row-end: span 6;
+  font-family: 'Fredericka the Great', cursive;
+}
+.card-v span:nth-child(n+2){
+  margin-top: 5px;
+}
+.card-w{
+  grid-column-end: span 3;
+  grid-row-end: span 3;
+  transform: rotate(-90deg);
+  font-family: 'Monoton', cursive;
+}
+.card-w span:nth-child(n+2){
+  padding-top: 5px;
+  border-top: 4px var(--cblack) solid;
+}
+.card-w span:nth-child(-n+2){
+  padding-bottom: 3px;
+}
+.card-x{
+  grid-column-end: span 5;
+  grid-row-end: span 3;
+  font-family: 'Fredericka the Great', cursive;
+}
+.card-x span:nth-child(2){
+  margin-top: -5px;
+}
+.card-y{
+  grid-column-end: span 5;
+  grid-row-end: span 3;
+  font-family: 'Righteous', cursive;
+}
+.card-y span:nth-child(2){
+  margin-top: 10px;
+}
+.card-z{
+  grid-column-end: span 6;
+  grid-row-end: span 3;
+  font-family: 'Fredoka One', cursive;
+}
+.card-z span:nth-child(2){
+  margin-top: 5px;
+}
+
+@media (min-width:500px){
+  ul{
+    width: 450px;
+  }
+  header{
+    width: 442px;
+  }
+  header h1{
+    margin: 0 34px;
+  }
+  header, header::after{
+    background-size: 34px;
+  }
+}
+@media (min-width:600px){
+  ul{
+    width: 550px;
+  }
+  header{
+    width: 542px;
+  }
+  header h1{
+    margin: 0 40px;
+  }
+  header, header::after{
+    background-size: 40px;
+  }
+}
+@media (min-width:900px){
+  ul{
+    width: 800px;
+  }
+  header{
+    width: 792px;
+  }
+  header h1{
+    margin: 0 60px;
+  }
+  header, header::after{
+    background-size: 60px;
+  }
+}
+@media (min-width:1250px){
+  ul{
+    width: 1150px;
+  }
+  header{
+    width: 1142px;
+  }
+  header h1{
+    margin: 0 86px;
+  }
+  header, header::after{
+    background-size: 86px;
+  }
+}
+@media (min-width:1550px){
+  ul{
+    width: 1350px;
+  }
+  header{
+    width: 1342px;
+  }
+  header h1{
+    margin: 0 100px;
+  }
+  header, header::after{
+    background-size: 100px;
+  }
+}
+</style>
+
+<script type="text/javascript">
+function slabTextHeadlines() {
+  $("h1").slabText({});
+};
+var WebFontConfig = {
+  google: { families: [ 'Righteous:400:latin', 'Fredoka+One:400:latin', 'Krona+One:400:latin', 'Fredericka+the+Great:400:latin', 'Odibee+Sans:400:latin', 'Monoton:400:latin', 'Bungee+Inline:400:latin' ] },
+  fontactive: slabTextHeadlines,
+  fontinactive: slabTextHeadlines
+};
+(function() {
+  var wf = document.createElement('script');
+  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+})();
+</script>
+
+<header>
+  <h1><span class="slabtext">Presented for your delectation</span><span class="slabtext">A CSS grid Representation</span> <span class="slabtext">of CodePen Experimentation</span></h1>
+</header>
+<ul>
+  <li class="card-e">
+    <h1><a href="https://codepen.io/andybarefoot/full/Gwggor" target="playingCards"><span class="slabtext">Playing</span> <span class="slabtext">Card Grid</span> <span class="slabtext">Layout</span></a></h1>
+  </li>
+  <li class="card-a">
+    <h1><a href="https://codepen.io/andybarefoot/full/wvKJweJ" target="layeredBG"><span class="slabtext">Layered</span> <span class="slabtext">Background</span> <span class="slabtext">eCommerce</span></a></h1>
+  </li>
+  <li class="card-v">
+    <h1><a href="http://www.andybarefoot.com/got/grid.html" target="gotgrid"><span class="slabtext">CSS</span> <span class="slabtext">Grid:</span> <span class="slabtext">Grid</span> <span class="slabtext">of</span> <span class="slabtext">Thrones</span></a></h1>
+      
+    </li>
+  <li class="card-s">
+    <h1><a href="https://codepen.io/andybarefoot/full/MEbORa" target="animatedLizards"><span class="slabtext">Animated</span> <span class="slabtext">lizard</span> <span class="slabtext">tiles</span></a></h1>
+  </li>
+  <li class="card-b">
+    <h1><a href="https://codepen.io/andybarefoot/full/oNjxYYG" target="bookshelf"><span class="slabtext">Diamond</span> <span class="slabtext">Grid</span> <span class="slabtext">Bookshelf</span></a></h1>
+      
+    </li>
+  <li class="card-c">
+    <h1><a href="https://codepen.io/andybarefoot/full/GRKyjPz" target="scrollExpand"><span class="slabtext">Expanding</span> <span class="slabtext">Scroll</span> <span class="slabtext">Experiment</span></a></h1>
+  </li>
+  <li class="card-d">
+    <h1><a href="https://codepen.io/andybarefoot/full/rXqMQe" target="perspective"><span class="slabtext">eCommerce</span> <span class="slabtext">Perspective</span> <span class="slabtext">grid</span></a></h1>
+  </li>
+  <li class="card-f">
+    <h1><a href="https://codepen.io/andybarefoot/full/LXYyzd" target="tshirtsCard"><span class="slabtext">T-shirt</span> <span class="slabtext">Card Layout</span></a></h1>
+  </li>
+  <li class="card-h">
+    <h1><a href="https://codepen.io/andybarefoot/full/VwZjVma" target="tesselate"><span class="slabtext">Tessellated</span> <span class="slabtext">Product</span> <span class="slabtext">Layout</span></a></h1>
+  </li>
+  <li class="card-i">
+    <h1><a href="https://codepen.io/andybarefoot/full/WKPZrV" target="dropCaps"><span class="slabtext">Dynamic</span> <span class="slabtext">Drop Caps</span></a></h1>
+  </li>
+  <li class="card-j">
+    <h1><a href="https://codepen.io/andybarefoot/pen/PBPrex" target="isoEcom"><span class="slabtext">Isometric</span> <span class="slabtext">eCommerce</span> <span class="slabtext">Grid</span></a></h1>
+  </li>
+  <li class="card-l">
+    <h1><a href="https://codepen.io/andybarefoot/pen/ypPgod" target="stackedCubes"><span class="slabtext">Stacked</span> <span class="slabtext">Cubes</span></a></h1>
+  </li>
+  <li class="card-m">
+    <h1><a href="https://codepen.io/andybarefoot/pen/ypXYVJ" target="horizScroll"><span class="slabtext">Horizontal</span> <span class="slabtext">grid</span></a></h1>
+  </li>
+  <li class="card-n">
+    <h1><a href="https://codepen.io/andybarefoot/pen/MERBPx" target="isoGrid"><span class="slabtext">Isometric</span> <span class="slabtext">Layered</span> <span class="slabtext">Grid</span></a></h1></li>
+  <li class="card-o">
+    <h1><a href="https://codepen.io/andybarefoot/pen/wrXvLj" target="gridMask"><span class="slabtext">CSS Grid</span> <span class="slabtext">as a</span> <span class="slabtext">mask</span></a></h1>
+  </li>
+  <li class="card-p">
+    <h1><a href="https://codepen.io/andybarefoot/pen/GMyREX" target="perspect"><span class="slabtext">Responsive</span> <span class="slabtext">Perspective</span> <span class="slabtext">layout</span></a></h1>
+  </li>
+  <li class="card-q">
+    <h1><a href="https://codepen.io/andybarefoot/pen/WXpKJV" target="imageZoom"><span class="slabtext">Image</span> <span class="slabtext">Squish</span> <span class="slabtext">with CSS Grid</span></a></h1>
+  </li>
+  <li class="card-r">
+    <h1><a href="https://codepen.io/andybarefoot/full/GMvygq" target="booksPoster"><span class="slabtext">Rodchenko</span> <span class="slabtext">poster layout</span></a></h1>
+  </li>
+  <li class="card-t">
+    <h1><a href="https://codepen.io/andybarefoot/full/QqGBro" target="cssgridDiamonds"><span class="slabtext">Diamond</span> <span class="slabtext">Grid</span> <span class="slabtext">layout</span></a></h1>
+  </li>
+  <li class="card-u">
+    <h1><a href="https://codepen.io/andybarefoot/pen/zdbVMm" target="cssgridMasonry"><span class="slabtext">Masonry</span> <span class="slabtext">layout</span> <span class="slabtext">with</span> <span class="slabtext">CSS Grid</span></a></h1>
+  </li>
+  <li class="card-y">
+    <h1><a href="http://www.andybarefoot.com/cocktails/" target="cocktails"><span class="slabtext">Cocktail</span> <span class="slabtext">Menu</span></a></h1>
+  </li>
+  <li class="card-z">
+    <h1><a href="http://www.andybarefoot.com/got/" target="got"><span class="slabtext">Valar</span> <span class="slabtext">Morghulis</span></a></h1>
+  </li>
+  <li class="card-k">  
+    <h1><a href="https://codepen.io/andybarefoot/pen/GGVLov" target="overrated"><span class="slabtext">Layout </span> <span class="slabtext">is</span> <span class="slabtext">overrated</span></a></h1>
+  </li>
+   <li class="card-x">
+    <h1><a href="http://www.andybarefoot.com/olympics/" target="olympics"><span class="slabtext">Olympics</span> <span class="slabtext">2016</span></a></h1>
+  </li>
+ <li class="card-g">
+    <h1><a href="https://codepen.io/andybarefoot/full/XxqveV" target="sneakerSkew"><span class="slabtext">Skewed</span> <span class="slabtext">Sneaker</span> <span class="slabtext">Grid</span></a></h1>
+  </li>
+  <li class="card-w">
+    <h1><a href="https://medium.com/@andybarefoot/stretching-the-grid-5-fun-ways-to-use-css-grid-5931166f467f" target="stretch"><span class="slabtext">Stretching</span> <span class="slabtext">the</span> <span class="slabtext">Grid</span></a></h1>
+  </li>
+</ul>
